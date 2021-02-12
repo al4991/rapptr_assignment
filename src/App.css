@@ -1,0 +1,227 @@
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: 100vh;
+}
+.App {
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: rgb(7, 60, 76);
+  background-image: radial-gradient(
+    circle at 0px 100%,
+    rgba(255, 255, 255, 0),
+    rgb(47, 203, 252) 102%
+  );
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+/* Login page styling */
+
+.login {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  min-width: 200px;
+  max-width: 600px;
+  min-height: 350px;
+  max-height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-form {
+  height: 100%;
+  position: relative;
+}
+
+.login-field {
+  position: relative;
+  text-align: left;
+}
+
+.login-field label {
+  position: relative;
+  top: 5px;
+}
+
+.login-input {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 12px 40px;
+  margin: 8px 0px 20px 0px;
+  display: inline-block;
+  width: 100%;
+}
+
+.login-form input[type="submit"] {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+
+  position: relative;
+  display: block;
+  width: 100%;
+
+  font-size: 16px;
+  color: white;
+  background-color: #00a699;
+  transition-duration: 0.4s;
+}
+
+.login-form input[type="submit"]:hover {
+  opacity: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: #0fdb7c;
+}
+
+.login-form input[type="submit"]:disabled {
+  background-color: rgba(0, 166, 153, 0.5);
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 39px;
+  color: gray;
+}
+
+.error-message {
+  display: block;
+  color: red;
+  position: absolute;
+  top: 65px;
+  left: 40px;
+  font-size: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.auth-error-message {
+  display: block;
+  color: red;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.err {
+  border: solid 1px red;
+}
+.err:focus {
+  border: solid 1px red;
+  box-shadow: 0 0 10px white;
+  outline: none !important;
+}
+
+.valid {
+  border: solid 1px green;
+}
+.valid:focus {
+  border: solid 1px green;
+  box-shadow: 0 0 10px white;
+  outline: none !important;
+}
+
+/* TodoList Styling*/
+.list-wrapper {
+  padding-bottom: 10px;
+}
+
+.list {
+  position: relative;
+  width: 70%;
+  min-width: 200px;
+  min-height: 100%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 80px);
+  margin-bottom: 10px;
+}
+
+.list .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 22px;
+  color: gray;
+}
+
+.list-item {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0px 20% 10px 20%;
+}
+
+.list-icons {
+  display: inline;
+  float: right;
+}
+
+.logout {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px 20px;
+  color: white;
+  background-color: #ff5a5f;
+}
+.logout:hover {
+  opacity: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: #fc2e0a;
+}
+
+.list-input {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 12px 40px;
+  margin: 8px 0px 20px 0px;
+  display: inline;
+  width: 95%;
+}
+
+.new-item {
+  float: right;
+  display: inline;
+  width: 5%;
+  margin-top: 15px;
+}
