@@ -5,14 +5,14 @@ import IconInputWrapper from '../layout/IconInputWrapper';
 import AppContext from '../../context/appContext';
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
-    const [validEmail, setValidEmail] = useState();
-    const [validPass, setValidPass] = useState();
-    const [authError, setAuthError] = useState(false);
-
     const appContext = useContext(AppContext); 
     const { login } = appContext;
+
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [validEmail, setValidEmail] = useState(false);
+    const [validPass, setValidPass] = useState(false);
+    const [authError, setAuthError] = useState(false);
 
     const onEmailChange = (e) => {
         e.preventDefault();
@@ -29,9 +29,6 @@ const Login = () => {
     }
 
     const validateEmail = (email) => {
-        if (email.length === 0) { 
-            setValidEmail(null)
-        }
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         setValidEmail(re.test(String(email).toLowerCase()));
     }
@@ -50,8 +47,7 @@ const Login = () => {
             headers: { 
                 'Accept' : 'application/json',
                 'Content-Type': 'application/x-www-form-urlencoded', 
-            },
-            withCredentials: true
+            }
         })
         .catch(err => {
             console.log(err)
@@ -67,7 +63,9 @@ const Login = () => {
     return (
         <div className='login container'> 
             <form className="login-form">
+
                 <h1> Rapptr Labs </h1> 
+
                 <IconInputWrapper icon={<MdPerson />} title={"Email"} optError={!validEmail && email.length > 0 && <p className="error-message">Not a valid email</p>}>
                     <input 
                         className={`login-input ${email.length === 0 ? null : validEmail ? "valid" : "err" }`}
@@ -92,6 +90,7 @@ const Login = () => {
                         maxLength='16'
                     />
                 </IconInputWrapper>
+                
                 <div>
                     <input 
                         type='submit' 

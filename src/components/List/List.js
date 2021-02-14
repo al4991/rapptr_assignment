@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import ListItem from '../layout/ListItem';
+import ListItem from './ListItem';
 import { MdSearch, MdAdd } from 'react-icons/md';
 import IconInputWrapper from '../layout/IconInputWrapper';
 import AppContext from '../../context/appContext';
